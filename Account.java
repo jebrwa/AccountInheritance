@@ -1,16 +1,6 @@
 package accountinheritance;
 import java.util.Date;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author jwwallace
- */
 public class Account {
 
     private int id = 0;
@@ -25,54 +15,73 @@ public class Account {
             annualInterestRate = 0.0;	
     }
 
-
-    public Account(int newId, double newBalance) {
+    public Account(int newId, double newBalance){
+        
                     id = newId;
                     balance = newBalance;
+                    
             }
-             Account(int newId, double newBalance, double newAnnualInterestRate) {
-                    id = newId;
-                    balance = newBalance;
-                    annualInterestRate = newAnnualInterestRate;
+    
+            Account(int newId, double newBalance, double newAnnualInterestRate){
+
+                   id = newId;
+                   balance = newBalance;
+                   annualInterestRate = newAnnualInterestRate;
             }
 
   
-            public int getId() {
+            public int getId(){
                     return id;
+                    
             }
-            public double getBalance() {
+            
+            public double getBalance(){
                     return balance;
+                    
             }
-            public double getAnnualInterestRate() {
+            
+            public double getAnnualInterestRate(){
                     return annualInterestRate;
+                    
             }
-            public void setId(int newId) {
+            
+            public void setId(int newId){
                     id = newId;
+                    
             }
-            public void setBalance(double newBalance) {
+            
+            public void setBalance(double newBalance){
                     balance = newBalance;
+                    
             }
-            public static void setAnnualInterestRate(double newAnnualInterestRate) {
+            
+            public static void setAnnualInterestRate(double newAnnualInterestRate){
                     annualInterestRate = newAnnualInterestRate;
+                    
             }
    
 
-    public Date getDateCreated() {
+    public Date getDateCreated(){
 
             return dateCreated;
+            
             }
    
-            double getMonthlyInterestRate() {
+            double getMonthlyInterestRate(){
                     return annualInterestRate/12/100 * balance;
+                    
             }
     
-            double withdraw(double amount) {
+            double withdraw(double amount){
                     return balance -= amount;
+                    
             }	
    
-            double deposit(double amount) {
+            double deposit(double amount){
                     return balance += amount;
+                    
             }
+   
 }
     
 
